@@ -1,5 +1,6 @@
 
 fs = require 'fs'
+pathlib = require 'path'
 
 vars = {}
 
@@ -30,7 +31,7 @@ class HTMLSource
   detectIncludeFile: (line) ->
     if commands.includeFile.test(line)
       source = line.match(commands.includeFile)[1]
-      component = new HTMLSource source
+      component = new HTMLSource pathlib.dirname(@path) + '/' + source
       component.parse()
       @lines.push line for line in component.lines
     line
@@ -63,8 +64,8 @@ compileFile = (file) ->
 path = 'error.error'
 outputPath = 'output.html'
 process.argv.forEach (val, index, array) ->
-  path = val if index == 2
-  outputPath = val if index == 3
+  path = __dirname + '/' + val if index == 2
+  outputPath = __dirname + '/' + val if index == 3
 
 fs.lstat path, (error, stats) ->
   stopWith error if error
