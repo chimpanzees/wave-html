@@ -68,10 +68,12 @@ compileFile = (file) ->
 
 path = 'error.error'
 outputPath = 'output.html'
-process.argv.forEach (val, index, array) ->
-  path = process.cwd() + '/' + val if index == 2
-  outputPath = process.cwd() + '/' + val if index == 3
 
-fs.lstat path, (error, stats) ->
-  stopWith error if error
-  compileFile path if stats.isFile()
+wave = (input, output = 'output.html') ->
+  path = process.cwd() + '/' + input
+  outputPath = process.cwd() + '/' + output
+  fs.lstat path, (error, stats) ->
+    stopWith error if error
+    compileFile path if stats.isFile()
+
+module.exports = wave
