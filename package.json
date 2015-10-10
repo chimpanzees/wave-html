@@ -1,6 +1,6 @@
 {
   "name": "wave-html",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple preprocessor for HTML",
   "bin": {
     "wave": "executable.js"
@@ -8,6 +8,9 @@
   "main": "wave.js",
   "directories": {
     "example": "examples"
+  },
+  "dependencies": {
+    "js-beautify": "1.5.10"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

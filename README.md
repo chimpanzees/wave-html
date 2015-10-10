@@ -2,6 +2,8 @@
 
 A simple preprocessor for ***Hyper Text Markup Language***.
 
+This project is still in development! Please view ***Important notice*** for more information.
+
 ## Introduction
 
 ***Wave .html*** *is a project that adds some extra functionality to* ***Hyper Text Markup Language*** *pages. An example input and output file are added in the examples folder in the original repo on Github.*
@@ -37,6 +39,10 @@ A simple preprocessor for ***Hyper Text Markup Language***.
 ## Installation
 
 *Call the compiler from the command line by using the `wave` command. The output argument is optional. If this is not provided, the output destination will outomatically be output.html. This dependency uses the* ***js-beatifier*** *dependency too! Make sure you have installed it before running the* ***wave*** *compiler*.
+
+`$ sudo npm install -g js-beautify`
+
+`$ sudo npm install -g wave-html
 
 `$ wave input.html output.html`
 
