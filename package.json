@@ -1,0 +1,19 @@
+{
+  "name": "wave-html",
+  "version": "1.0.0",
+  "description": "Simple preprocessor for HTML",
+  "main": "wave.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wave",
+    "html",
+    "preprocessor"
+  ],
+  "author": "Jensen Bernard",
+  "license": "MIT"
+}

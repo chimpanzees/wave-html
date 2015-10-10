@@ -2,6 +2,8 @@
 fs = require 'fs'
 pathlib = require 'path'
 
+fixUI = require('js-beautify').html
+
 vars = {}
 
 commands =
@@ -20,6 +22,7 @@ class HTMLSource
       name = cmnd.match(commands.fetchDeclaredVariableName)[1]
       data = cmnd.substring(6 + name.length, cmnd.length - 3).trim()
       vars[name] = data
+      line = line.replace(commands.declareVariableCommand, '')
     line
 
   detectCallVariable: (line) ->
@@ -51,9 +54,11 @@ stopWith = (error) ->
   process.exit()
 
 saveOutput = (output) ->
+  buffer = ''
+  output.forEach (str) -> buffer += str + '\n' if str != ''
+  buffer = fixUI(buffer, { indent_size: 2 })
   outputFile = fs.createWriteStream outputPath
-  output.forEach (v) ->
-    outputFile.write v + '\n'
+  outputFile.write buffer
   outputFile.end()
 
 compileFile = (file) ->
@@ -64,8 +69,8 @@ compileFile = (file) ->
 path = 'error.error'
 outputPath = 'output.html'
 process.argv.forEach (val, index, array) ->
-  path = __dirname + '/' + val if index == 2
-  outputPath = __dirname + '/' + val if index == 3
+  path = process.cwd() + '/' + val if index == 2
+  outputPath = process.cwd() + '/' + val if index == 3
 
 fs.lstat path, (error, stats) ->
   stopWith error if error
