@@ -38,11 +38,9 @@ This project is still in development! Please view ***Important notice*** for mor
 
 ## Installation
 
-*Call the compiler from the command line by using the `wave` command. The output argument is optional. If this is not provided, the output destination will outomatically be output.html. This dependency uses the* ***js-beatifier*** *dependency too! Make sure you have installed it before running the* ***wave*** *compiler*.
+*Call the compiler from the command line by using the `wave` command. The output argument is optional. If this argument is not given, the output destination will automatically set to output.html.*
 
-`$ sudo npm install -g js-beautify`
-
-`$ sudo npm install -g wave-html
+`$ sudo npm install -g wave-html`
 
 `$ wave input.html output.html`
 
