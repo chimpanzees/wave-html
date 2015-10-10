@@ -88,7 +88,7 @@
   };
 
   saveOutput = function(output) {
-    var buffer, outputFile;
+    var buffer;
     buffer = '';
     output.forEach(function(str) {
       if (str !== '') {
@@ -98,9 +98,11 @@
     buffer = fixUI(buffer, {
       indent_size: 2
     });
-    outputFile = fs.createWriteStream(outputPath);
-    outputFile.write(buffer);
-    return outputFile.end();
+    return fs.writeFile(outputPath, buffer, function(error) {
+      if (error) {
+        return console.log(error);
+      }
+    });
   };
 
   compileFile = function(file) {

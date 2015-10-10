@@ -57,9 +57,7 @@ saveOutput = (output) ->
   buffer = ''
   output.forEach (str) -> buffer += str + '\n' if str != ''
   buffer = fixUI(buffer, { indent_size: 2 })
-  outputFile = fs.createWriteStream outputPath
-  outputFile.write buffer
-  outputFile.end()
+  fs.writeFile outputPath, buffer, (error) -> console.log error if error
 
 compileFile = (file) ->
   html = new HTMLSource file
