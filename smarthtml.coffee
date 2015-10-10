@@ -1,3 +1,3 @@
 
-HTML_COMMANDS:
+commands:
   declareVariable: /<!-- #(.)+( )(.)+ -->/i
