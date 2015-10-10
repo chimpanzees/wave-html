@@ -1,9 +1,6 @@
 
 fs = require 'fs'
 
-log4js = require 'log4js'
-logger = log4js.getLogger()
-
 vars = {}
 
 commands =
@@ -53,7 +50,7 @@ stopWith = (error) ->
   process.exit()
 
 saveOutput = (output) ->
-  outputFile = fs.createWriteStream 'output.html'
+  outputFile = fs.createWriteStream outputPath
   output.forEach (v) ->
     outputFile.write v + '\n'
   outputFile.end()
@@ -64,7 +61,10 @@ compileFile = (file) ->
   saveOutput html.lines
 
 path = 'error.error'
-process.argv.forEach (val, index, array) -> path = val if index == 2
+outputPath = 'output.html'
+process.argv.forEach (val, index, array) ->
+  path = val if index == 2
+  outputPath = val if index == 3
 
 fs.lstat path, (error, stats) ->
   stopWith error if error
