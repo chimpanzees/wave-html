@@ -1,6 +1,6 @@
 {
   "name": "wave-html",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple preprocessor for HTML",
   "bin": {
     "wave": "executable.js"
