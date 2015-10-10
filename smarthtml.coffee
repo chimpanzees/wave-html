@@ -9,8 +9,8 @@ vars = {}
 commands =
   callVariable: /<!-- \.(.+) -->/i,
   includeFile: /<!-- \.include (.+) -->/i,
-  fetchDeclaredVariableName: /<!-- \.declare \.(\w+)/i,
-  declareVariableCommand: /<!-- \.declare \.(.)+( )(.)+ -->/i
+  fetchDeclaredVariableName: /<!-- ~(\w+)/i,
+  declareVariableCommand: /<!-- ~(.)+( )(.)+ -->/i
 
 class HTMLSource
 
@@ -21,7 +21,7 @@ class HTMLSource
     if commands.declareVariableCommand.test(line)
       cmnd = line.match(commands.declareVariableCommand)[0]
       name = cmnd.match(commands.fetchDeclaredVariableName)[1]
-      data = cmnd.substring(15 + name.length, cmnd.length - 3).trim()
+      data = cmnd.substring(6 + name.length, cmnd.length - 3).trim()
       vars[name] = data
     line
 
