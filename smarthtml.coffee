@@ -7,7 +7,7 @@ logger = log4js.getLogger()
 vars = {}
 
 commands =
-  callVariable: /<!-- \.(.+) -->/i,
+  callVariable: /<!-- \.(\w+) -->/i,
   includeFile: /<!-- \.include (.+) -->/i,
   fetchDeclaredVariableName: /<!-- ~(\w+)/i,
   declareVariableCommand: /<!-- ~(.)+( )(.)+ -->/i
@@ -17,7 +17,6 @@ class HTMLSource
   constructor: (@path) -> @lines = []
 
   detectDeclareVariable: (line) ->
-    logger.debug line
     if commands.declareVariableCommand.test(line)
       cmnd = line.match(commands.declareVariableCommand)[0]
       name = cmnd.match(commands.fetchDeclaredVariableName)[1]
@@ -36,7 +35,6 @@ class HTMLSource
       source = line.match(commands.includeFile)[1]
       component = new HTMLSource source
       component.parse()
-      console.log line for line in component.lines
       @lines.push line for line in component.lines
     line
 
@@ -50,7 +48,6 @@ class HTMLSource
     data = fs.readFileSync @path, 'utf-8'
     @formatLine line for line in data.split(/\r?\n/i)
 
-# Needs REFACTORING
 stopWith = (error) ->
   console.log 'Stopped with error: ' + error
   process.exit()
@@ -62,8 +59,7 @@ saveOutput = (output) ->
   outputFile.end()
 
 compileFile = (file) ->
-  html = new HTMLSource file, () ->
-    console.log "COMPLETELY DONE"
+  html = new HTMLSource file
   html.parse()
   saveOutput html.lines
 
