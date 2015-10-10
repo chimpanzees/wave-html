@@ -2,6 +2,9 @@
   "name": "wave-html",
   "version": "1.0.0",
   "description": "Simple preprocessor for HTML",
+  "bin": {
+    "wave": "executable.js"
+  },
   "main": "wave.js",
   "directories": {
     "example": "examples"
