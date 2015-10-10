@@ -7,22 +7,22 @@ logger = log4js.getLogger()
 vars = {}
 
 commands =
-  variableName: /#(\w+)/i,
-  declareVariable: /<!-- #(.)+( )(.)+ -->/i,
-  callVariable: /<!-- @var (.+) -->/i,
-  includeFile: /<!-- INCLUDE (.+) -->/i
+  callVariable: /<!-- \.(.+) -->/i,
+  includeFile: /<!-- \.include (.+) -->/i,
+  fetchDeclaredVariableName: /<!-- \.declare \.(\w+)/i,
+  declareVariableCommand: /<!-- \.declare \.(.)+( )(.)+ -->/i
 
 class HTMLSource
 
   constructor: (@path) -> @lines = []
 
   detectDeclareVariable: (line) ->
-    if commands.declareVariable.test(line)
-      rows = line.match(commands.declareVariable)[0]
-      name = rows.match(commands.variableName)[1]
-      data = rows.substring(6 + name.length, rows.length - 3).trim()
+    logger.debug line
+    if commands.declareVariableCommand.test(line)
+      cmnd = line.match(commands.declareVariableCommand)[0]
+      name = cmnd.match(commands.fetchDeclaredVariableName)[1]
+      data = cmnd.substring(15 + name.length, cmnd.length - 3).trim()
       vars[name] = data
-      line = line.replace(commands.declareVariable, '')
     line
 
   detectCallVariable: (line) ->
