@@ -36,6 +36,7 @@ class HTMLSource
       source = line.match(commands.includeFile)[1]
       component = new HTMLSource source
       component.parse()
+      console.log line for line in component.lines
       @lines.push line for line in component.lines
     line
 
