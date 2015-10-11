@@ -17,25 +17,25 @@ This project is still in development! Please view ***Important notice*** for mor
 
 *The compiler makes it possible to add variables to basic* ***Hyper Text Markup Language*** *pages. You should start by declaring a new variable using the code below. The* ***~*** *means a new variable will be declared. Using the variable in the page is as simple as calling it with a* ***'.'*** *in front of it. By calling a variable, the complete tag will be replaced by the value of the named variable. Make sure you declare variables before calling them! Otherwise they will be replaces by 'undefined'.*
 
-*Declaring a variable:*
+->***Declaring a variable:***<-
 
-`<!-- ~title Hello World! -->`
+->`<!-- ~title Hello World! -->`<-
 
-*Calling a variable:*
+->***Calling a variable:***<-
 
-`<title><!-- .title --></title>`
+->`<title><!-- .title --></title>`<-
 
-*Results in:*
+->***Results in:***<-
 
-`<title>Hello World!</title>`
+->`<title>Hello World!</title>`<-
 
 ### Includes
 
 ***Wave-html*** *also makes it possible to include different html files. Simply write the following code, and the compiler will replace the tag with the content of the destination file.*
 
-*Including a file:*
+->***Including a file:***<-
 
-`<!-- .include footer.html -->`
+->`<!-- .include footer.html -->`<-
 
 ## Important notice
 
@@ -45,9 +45,9 @@ This project is still in development! Please view ***Important notice*** for mor
 
 *Call the compiler from the command line by using the `wave` command. The output argument is optional. If this argument is not given, the output destination will automatically set to output.html.*
 
-`$ sudo npm install -g wave-html`
+->`$ sudo npm install -g wave-html`<-
 
-`$ wave input.html output.html`
+->`$ wave input.html output.html`<-
 
 ## License
 
