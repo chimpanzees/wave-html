@@ -1,5 +1,7 @@
 # Wave HTML
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Jense5/Wave?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
 A simple preprocessor for ***Hyper Text Markup Language***.
 
 This project is still in development! Please view ***Important notice*** for more information.
