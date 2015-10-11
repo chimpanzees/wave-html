@@ -1,5 +1,7 @@
 # Wave HTML
 
+[![npm version](https://badge.fury.io/js/wave-html.svg)](https://badge.fury.io/js/wave-html)
+
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Jense5/Wave?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
 A simple preprocessor for ***Hyper Text Markup Language***.
