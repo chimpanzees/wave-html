@@ -69,7 +69,7 @@ outputPath = 'output.html'
 
 completePathFrom = (path) ->
   return path if pathlib.isAbsolute path
-  path.resolve process.cwd(), path
+  pathlib.resolve process.cwd(), path
 
 wave = (input, output = 'output.html') ->
   path = completePathFrom input

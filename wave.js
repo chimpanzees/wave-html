@@ -120,7 +120,7 @@
     if (pathlib.isAbsolute(path)) {
       return path;
     }
-    return path.resolve(process.cwd(), path);
+    return pathlib.resolve(process.cwd(), path);
   };
 
   wave = function(input, output) {
