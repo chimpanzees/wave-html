@@ -1,6 +1,7 @@
 
 fs = require 'fs'
 pathlib = require 'path'
+callsite = require 'callsite'
 
 fixUI = require('js-beautify').html
 
@@ -56,8 +57,10 @@ stopWith = (error) ->
 saveOutput = (output) ->
   buffer = ''
   output.forEach (str) -> buffer += str + '\n' if str != ''
-  buffer = fixUI(buffer, { indent_size: 2 })
-  fs.writeFile outputPath, buffer, (error) -> console.log error if error
+  buffer = fixUI(buffer, { indent_size: 2, end_with_newline: true })
+  fs.writeFile outputPath, buffer, (error) ->
+    console.log error if error
+    mainCallback()
 
 compileFile = (file) ->
   html = new HTMLSource file
@@ -66,14 +69,18 @@ compileFile = (file) ->
 
 path = 'error.error'
 outputPath = 'output.html'
+mainCallback = undefined
 
 completePathFrom = (path) ->
   return path if pathlib.isAbsolute path
-  pathlib.resolve process.cwd(), path
+  caller = callsite()[2].getFileName()
+  dir = pathlib.dirname(caller)
+  pathlib.resolve dir, path
 
-wave = (input, output = 'output.html') ->
+wave = (input, output = 'output.html', callback = undefined) ->
   path = completePathFrom input
   outputPath = completePathFrom output
+  mainCallback = callback
   fs.lstat path, (error, stats) ->
     stopWith error if error
     compileFile path if stats.isFile()
