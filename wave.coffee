@@ -69,7 +69,8 @@ compileFile = (file) ->
 
 path = 'error.error'
 outputPath = 'output.html'
-mainCallback = undefined
+mainCallback = () ->
+  console.log 'Done.'
 
 completePathFrom = (path) ->
   return path if pathlib.isAbsolute path
@@ -77,10 +78,10 @@ completePathFrom = (path) ->
   dir = pathlib.dirname(caller)
   pathlib.resolve dir, path
 
-wave = (input, output = 'output.html', callback = undefined) ->
+wave = (input, output = 'output.html', callback = null) ->
   path = completePathFrom input
   outputPath = completePathFrom output
-  mainCallback = callback
+  mainCallback = callback if callback?
   fs.lstat path, (error, stats) ->
     stopWith error if error
     compileFile path if stats.isFile()

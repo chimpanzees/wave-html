@@ -120,7 +120,9 @@
 
   outputPath = 'output.html';
 
-  mainCallback = void 0;
+  mainCallback = function() {
+    return console.log('Done.');
+  };
 
   completePathFrom = function(path) {
     var caller, dir;
@@ -137,11 +139,13 @@
       output = 'output.html';
     }
     if (callback == null) {
-      callback = void 0;
+      callback = null;
     }
     path = completePathFrom(input);
     outputPath = completePathFrom(output);
-    mainCallback = callback;
+    if (callback != null) {
+      mainCallback = callback;
+    }
     return fs.lstat(path, function(error, stats) {
       if (error) {
         stopWith(error);
