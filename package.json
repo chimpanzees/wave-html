@@ -23,6 +23,7 @@
   "author": "Jensen Bernard",
   "license": "MIT",
   "devDependencies": {
+    "argparse": "^1.0.2",
     "callsite": "^1.0.0",
     "coffee-script": "^1.10.0",
     "mocha": "^2.3.3"
