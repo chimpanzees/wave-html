@@ -3,9 +3,9 @@
   "version": "1.0.5",
   "description": "Simple preprocessor for HTML",
   "bin": {
-    "wave": "executable.js"
+    "wave": "bin/executable.js"
   },
-  "main": "wave.js",
+  "main": "lib/wave.js",
   "directories": {
     "example": "examples"
   },

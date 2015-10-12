@@ -1,7 +1,7 @@
 fs = require 'fs'
 chai = require 'chai'
 
-wave = require __dirname + '/../wave'
+wave = require __dirname + '/../lib/wave'
 
 chai.should()
 expect = chai.expect
