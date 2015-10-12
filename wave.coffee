@@ -67,9 +67,13 @@ compileFile = (file) ->
 path = 'error.error'
 outputPath = 'output.html'
 
+completePathFrom = (path) ->
+  return path if pathlib.isAbsolute path
+  path.resolve process.cwd(), path
+
 wave = (input, output = 'output.html') ->
-  path = process.cwd() + '/' + input
-  outputPath = process.cwd() + '/' + output
+  path = completePathFrom input
+  outputPath = completePathFrom output
   fs.lstat path, (error, stats) ->
     stopWith error if error
     compileFile path if stats.isFile()
