@@ -29,7 +29,7 @@ To understand how this works exactly, you can find example input and output file
 `$ sudo npm install -g wave-html`
 
 ## Documentation
-*The tutorial on how to write correct wave-html (.whtml) files and how to use them can be found on [the project page](http://jense5.github.io/jense5/Wave).*
+*The tutorial on how to write correct wave-html (.whtml) files and how to use them can be found on [the project page](http://jense5.github.io/Wave).*
 
 ## Extra
 *To add correct syntax highlighting for* ***Wave*** *in Atom, visit [this project](https://github.com/N1ghtly/language-wave). Support for other editors will be added in the future (Probably, maybe... We don't know yet).*
