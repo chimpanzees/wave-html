@@ -1,11 +1,11 @@
 # Wave
 
-[![npm version](https://img.shields.io/npm/v/wave-html-green.svg?style=flat-square)](https://www.npmjs.com/package/wave-html)
+[![npm version](https://img.shields.io/npm/v/wave-html.svg?style=flat-square)](https://www.npmjs.com/package/wave-html)
 [![npm downloads](https://img.shields.io/npm/dm/wave-html.svg?style=flat-square)](https://www.npmjs.com/package/wave-html)
 [![Built with Grunt](https://img.shields.io/badge/Built%20with-Grunt-orange.svg?style=flat-square)](http://gruntjs.com/)
 [![Gitter](https://img.shields.io/badge/Gitter-Join%20Chat%20→-1DCE73.svg?style=flat-square)](https://gitter.im/Jense5/Wave?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![isCool](https://img.shields.io/badge/FANCY-YES-red.svg?style=flat-square)](https://www.npmjs.com/package/wave-html)
-[![npm license](https://img.shields.io/npm/l/wave-html.svg?style=flat-square)](https://github.com/Jense5/Wave/blob/master/LICENSE.md)
+[![npm license](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)](https://github.com/Jense5/Wave/blob/master/LICENSE.md)
 
 <p align="center"><img src="http://i.imgur.com/J7qioAo.png" height="200" /></p>
 
