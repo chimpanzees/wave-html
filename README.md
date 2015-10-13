@@ -11,20 +11,16 @@
 
 Wave is a simple preprocessor for ***Hyper Text Markup Language (HTML)***.
 
-This project is still in development! Please read ***Important notice*** for more information.
+***Wave v1.0.6***.
 
 ## Introduction
 
 ***Wave*** *is a project that acts as a preprocessor and adds some extra functionality to* ***Hyper Text Markup Language (HTML)*** *pages.
-To understand how this works exactly, you can find example input and output files in the examples folder in the original repo on Github or on the [projects website](http://jense5.github.io/Wave).*
-
-## Important notice
-
-*The first version was written in less than two hours. It was used for developing another project with more ease. However, development is being continued and more features will be added over time. To file a bug, please use [Github's issue tracker](https://github.com/Jense5/Wave/issues).*
+To understand how this works, you can find example input and output files in the examples folder in the original repo on Github or on the [projects website](http://jense5.github.io/Wave).*
 
 ## Installation
 
-***Wave*** *can be installed using* ***npm*** *(package manager for javascript). Run the command below and you're good to go.*
+***Wave*** *can be installed using* ***npm*** *(package manager for* ***NodeJS***)*. Run the command below and you're good to go.*
 
 `$ sudo npm install -g wave-html`
 
