@@ -2,10 +2,10 @@
 
 [![npm version](https://badge.fury.io/js/wave-html.svg)](https://badge.fury.io/js/wave-html)
 ![npm downloads](https://img.shields.io/npm/dm/wave-html.svg)
-
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+![npm license](https://img.shields.io/npm/l/wave-html.svg)
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Jense5/Wave?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 
 A simple preprocessor for ***Hyper Text Markup Language***.
 
