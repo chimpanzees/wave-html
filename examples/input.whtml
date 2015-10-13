@@ -2,5 +2,11 @@
 <!-- ~username Jense5 -->
 
 <h1><!-- .title --></h1>
+
 <!-- .include include.whtml -->
+
+<!-- .loop 1:10 -->
+  <p>Some paragraph</p>
+<!-- .endloop -->
+
 <!-- .notinclude notinclude.whtml -->

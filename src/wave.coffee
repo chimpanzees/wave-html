@@ -11,12 +11,19 @@ commands =
   callVariable: /<!-- \.(\w+) -->/i,
   includeFile: /<!-- \.include (.+) -->/i,
   notincludeFile: /<!-- \.notinclude (.+) -->/i,
+  startOfLoop: /<!-- .loop ([0-9]+):([0-9]+) -->/i,
+  endOfLoop: /<!-- .endloop -->/i,
   fetchDeclaredVariableName: /<!-- ~(\w+)/i,
   declareVariableCommand: /<!-- ~(.)+( )(.)+ -->/i
 
 class HTMLSource
 
-  constructor: (@path) -> @lines = []
+  constructor: (@path) ->
+    @lines = []
+    @loops = []
+    @startValueForLoop = 0
+    @endValueForLoop = 0
+    @isLooping = false
 
   detectDeclareVariable: (line) ->
     if commands.declareVariableCommand.test(line)
@@ -45,12 +52,37 @@ class HTMLSource
     line = "" if commands.notincludeFile.test(line)
     line
 
+  detectStartOfLoop: (line) ->
+    if commands.startOfLoop.test(line)
+      @isLooping = true
+      elements = line.match(commands.startOfLoop)
+      @startValueForLoop = elements[1]
+      @endValueForLoop = elements[2]
+      line = ''
+    line
+
+  detectEndOfLoop: (line) ->
+    return commands.endOfLoop.test(line)
+
   formatLine: (line) ->
-    line = @detectDeclareVariable line
-    line = @detectCallVariable line
-    line = @detectIncludeFile line
-    line = @detectNotincludeFile line
-    @lines.push line
+    if @isLooping
+      if @detectEndOfLoop line
+        @isLooping = false
+        for num in [@startValueForLoop .. @endValueForLoop]
+          for subline in @loops
+            @lines.push subline
+        @loops = []
+        @startValueForLoop = 0
+        @endValueForLoop = 0
+      else
+        @loops.push line
+    else
+      line = @detectDeclareVariable line
+      line = @detectCallVariable line
+      line = @detectIncludeFile line
+      line = @detectNotincludeFile line
+      line = @detectStartOfLoop line
+      @lines.push line
 
   parse: () ->
     data = fs.readFileSync @path, 'utf-8'
