@@ -96,9 +96,7 @@ saveOutput = (output) ->
   buffer = ''
   output.forEach (str) -> buffer += str + '\n' if str != ''
   buffer = fixUI(buffer, { indent_size: 2, end_with_newline: true })
-  fs.writeFile outputPath, buffer, (error) ->
-    console.log error if error
-    mainCallback()
+  fs.writeFile outputPath, buffer, (error) -> console.log error if error
 
 compileFile = (file) ->
   html = new HTMLSource file
@@ -107,8 +105,6 @@ compileFile = (file) ->
 
 path = 'error.error'
 outputPath = 'output.html'
-mainCallback = () ->
-  console.log 'Done.'
 
 completePathFrom = (path) ->
   return path if pathlib.isAbsolute path
@@ -120,12 +116,11 @@ getFileExtension = (path) ->
   index = path.lastIndexOf('.')
   extension = path.substr(index).replace('.', '')
 
-wave = (input, output = 'output.html', callback = null) ->
+wave = (input, output = 'output.html') ->
   extension = getFileExtension(input)
   if extension == "whtml"
     path = completePathFrom input
     outputPath = completePathFrom output
-    mainCallback = callback if callback?
     fs.lstat path, (error, stats) ->
       stopWith error if error
       compileFile path if stats.isFile()
