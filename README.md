@@ -21,7 +21,7 @@ To understand how this works, you can find example input and output files in the
 `$ sudo npm install -g wave-html`
 
 ## Documentation
-*The tutorial, as well as more info on how to write correct wave-html (.whtml) files and how to use them, can be found on [the projects page](http://jense5.github.io/Wave). As this readme will not likely be updated very often, all future documentation about added functionalities will appear on the project page. *
+*The tutorial, as well as more info on how to write correct wave-html (.whtml) files and how to use them, can be found on [the projects page](http://jense5.github.io/Wave). As this readme will not likely be updated very often, all future documentation about added functionalities will appear on the project page.*
 
 ## Extra
 *To add correct syntax highlighting for* ***Wave*** *in Atom, visit [this project](https://github.com/N1ghtly/language-wave). Support for other editors will be added in the future (Probably, maybe... We don't know yet). This is mostly based on the syntax highlighting for regular HTML but some special styles have been added to fully accompany Wave.*
