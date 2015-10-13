@@ -57,7 +57,3 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-
-# Ignore compiled JS files
-*.js
