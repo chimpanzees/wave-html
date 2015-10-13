@@ -5,7 +5,7 @@
   "bin": {
     "wave": "bin/executable.js"
   },
-  "main": "lib/wave.js",
+  "main": "bin/wave.js",
   "directories": {
     "example": "examples"
   },
