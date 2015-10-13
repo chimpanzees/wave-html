@@ -78,12 +78,21 @@ completePathFrom = (path) ->
   dir = pathlib.dirname(caller)
   pathlib.resolve dir, path
 
+getFileExtension = (path) ->
+  index = path.lastIndexOf('.')
+  extension = path.substr(index).replace('.', '')
+
 wave = (input, output = 'output.html', callback = null) ->
-  path = completePathFrom input
-  outputPath = completePathFrom output
-  mainCallback = callback if callback?
-  fs.lstat path, (error, stats) ->
-    stopWith error if error
-    compileFile path if stats.isFile()
+  extension = getFileExtension(input)
+  extension="zed"
+  if extension == "whtml"
+    path = completePathFrom input
+    outputPath = completePathFrom output
+    mainCallback = callback if callback?
+    fs.lstat path, (error, stats) ->
+      stopWith error if error
+      compileFile path if stats.isFile()
+  else
+    stopWith("The extension '." + extension + "' of the input file is not valid.")
 
 module.exports = wave
