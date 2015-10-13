@@ -28,6 +28,4 @@ args = parser.parseArgs()
 input = path.resolve process.cwd(), args.input
 output = path.resolve process.cwd(), args.output
 
-callback = () -> console.log 'Done.'
-
-wave(input, output, callback)
+wave(input, output)
