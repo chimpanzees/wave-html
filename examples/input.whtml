@@ -2,5 +2,5 @@
 <!-- ~username Jense5 -->
 
 <h1><!-- .title --></h1>
-<!-- .include include.html -->
-<!-- .notinclude notinclude.html -->
+<!-- .include include.whtml -->
+<!-- .notinclude notinclude.whtml -->

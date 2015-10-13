@@ -14,4 +14,4 @@ describe 'Wave', () ->
       example = fs.readFileSync __dirname + '/../../examples/example.html', 'utf-8'
       expect(line).to.equal(example[index]) for line, index in output
       done()
-    wave '../../examples/input.html', '../../examples/example.html', callback
+    wave '../../examples/input.whtml', '../../examples/example.html', callback
