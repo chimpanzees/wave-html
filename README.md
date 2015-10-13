@@ -12,19 +12,19 @@
 ## Introduction
 
 ***Wave*** *is a project that acts as a preprocessor and adds some extra functionality to* ***Hyper Text Markup Language (HTML)*** *pages.
-To understand how this works, you can find example input and output files in the examples folder in the original repo on Github or on the [projects website](http://jense5.github.io/Wave).*
+To understand how this works, you can find example input and output files in the examples folder in the original repo on Github. These and more examples are also explained on the [projects website](http://jense5.github.io/Wave).*
 
 ## Installation
 
-***Wave*** *can be installed using* ***npm*** *(package manager for* ***NodeJS***)*. Run the command below and you're good to go.*
+*As* ***Wave*** *is hosted over at* ***npm*** *,* ***Wave*** *can be installed using* ***npm*** *(package manager for* ***NodeJS***)*. Simply run the command below and you're good to go. If this is not the case and you can't seem to figure out what the issue is you can always use the issue tracker and we will try our best to help you.*
 
 `$ sudo npm install -g wave-html`
 
 ## Documentation
-*The tutorial on how to write correct wave-html (.whtml) files and how to use them can be found on [the project page](http://jense5.github.io/Wave).*
+*The tutorial, as well as more info on how to write correct wave-html (.whtml) files and how to use them, can be found on [the projects page](http://jense5.github.io/Wave). As this readme will not likely be updated very often, all future documentation about added functionalities will appear on the project page. *
 
 ## Extra
-*To add correct syntax highlighting for* ***Wave*** *in Atom, visit [this project](https://github.com/N1ghtly/language-wave). Support for other editors will be added in the future (Probably, maybe... We don't know yet).*
+*To add correct syntax highlighting for* ***Wave*** *in Atom, visit [this project](https://github.com/N1ghtly/language-wave). Support for other editors will be added in the future (Probably, maybe... We don't know yet). This is mostly based on the syntax highlighting for regular HTML but some special styles have been added to fully accompany Wave.*
 
 ## License
 
