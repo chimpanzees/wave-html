@@ -16,7 +16,7 @@ This project is still in development! Please read ***Important notice*** for mor
 ## Introduction
 
 ***Wave*** *is a project that acts as a preprocessor and adds some extra functionality to* ***Hyper Text Markup Language (HTML)*** *pages.
-To understand how this works exactly, you can find example input and output files in the examples folder in the original repo on Github.*
+To understand how this works exactly, you can find example input and output files in the examples folder in the original repo on Github or on the [projects website](http://jense5.github.io/Wave).*
 
 ## Important notice
 
