@@ -20,4 +20,4 @@ module.exports = (Grunt) ->
     fs.writeSync(fd, data, 0, data.length)
     fs.close(fd)
 
-  Grunt.registerTask 'default', ['coffee', 'prepare-executable']
+  Grunt.registerTask 'build', ['coffee', 'prepare-executable']
