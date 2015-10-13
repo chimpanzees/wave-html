@@ -2,7 +2,7 @@
 
 fs = require 'fs'
 path = require 'path'
-wave = require __dirname + '/../lib/wave'
+wave = require __dirname + '/wave'
 
 Parser = require('argparse').ArgumentParser
 

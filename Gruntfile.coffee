@@ -6,12 +6,12 @@ module.exports = (Grunt) ->
     coffee:
       compile:
         files:
-          'bin/executable.js': 'bin/executable.coffee',
-          'test/WaveTests.js': 'test/WaveTests.coffee',
-          'lib/wave.js': 'lib/wave.coffee'
+          'bin/executable.js': 'src/executable.coffee',
+          'bin/tests/WaveTests.js': 'tests/WaveTests.coffee',
+          'bin/wave.js': 'src/wave.coffee'
     mochaTest:
       test:
-        src: ['test/*.js']
+        src: ['bin/tests/*.js']
 
   Grunt.loadNpmTasks('grunt-mocha-test')
   Grunt.loadNpmTasks('grunt-contrib-coffee')
