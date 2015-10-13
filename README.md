@@ -24,7 +24,7 @@ To understand how this works exactly, you can find example input and output file
 
 ## Installation
 
-***Wave*** *can be installed using* ***npm*** *(package manager for javascript). Run the commands below and you're good to go.*
+***Wave*** *can be installed using* ***npm*** *(package manager for javascript). Run the command below and you're good to go.*
 
 `$ sudo npm install -g wave-html`
 
@@ -32,7 +32,7 @@ To understand how this works exactly, you can find example input and output file
 *The tutorial on how to write correct wave-html (.whtml) files and how to use them can be found on [the project page](http://jense5.github.io/jense5/Wave).*
 
 ## Extra
-*To add correct syntax highlighting for *Wave* *in Atom, visit [this project](https://github.com/N1ghtly/language-wave). Support for other editors will be added in the future (Probably, maybe... We don't know yet).*
+*To add correct syntax highlighting for* ***Wave*** *in Atom, visit [this project](https://github.com/N1ghtly/language-wave). Support for other editors will be added in the future (Probably, maybe... We don't know yet).*
 
 ## License
 
