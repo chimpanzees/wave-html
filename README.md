@@ -1,11 +1,10 @@
 # Wave HTML
 
-[![npm version](https://badge.fury.io/js/wave-html.svg)](https://badge.fury.io/js/wave-html)
-![npm downloads](https://img.shields.io/npm/dm/wave-html.svg)
-![npm license](https://img.shields.io/npm/l/wave-html.svg)
-
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/Jense5/Wave?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
+[![npm version](https://badge.fury.io/js/wave-html.svg)](https://www.npmjs.com/package/wave-html)
+[![npm downloads](https://img.shields.io/npm/dm/wave-html.svg)](https://www.npmjs.com/package/wave-html)
+[![Built with Grunt](https://img.shields.io/badge/Built%20with-Grunt-orange.svg)](http://gruntjs.com/)
+[![Gitter](https://img.shields.io/badge/Gitter-Join%20Chat%20→-1DCE73.svg)](https://gitter.im/Jense5/Wave?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![npm license](https://img.shields.io/npm/l/wave-html.svg)](https://github.com/Jense5/Wave/blob/master/LICENSE.md)
 
 A simple preprocessor for ***Hyper Text Markup Language***.
 
