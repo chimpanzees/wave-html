@@ -9,50 +9,30 @@
 
 <p align="center"><img src="http://i.imgur.com/J7qioAo.png" height="200" /></p>
 
-A simple preprocessor for ***Hyper Text Markup Language***.
+Wave is a simple preprocessor for ***Hyper Text Markup Language (HTML)***.
 
-This project is still in development! Please view ***Important notice*** for more information.
+This project is still in development! Please read ***Important notice*** for more information.
 
 ## Introduction
 
-***Wave .html*** *is a project that adds some extra functionality to* ***Hyper Text Markup Language*** *pages. An example input and output file are added in the examples folder in the original repo on Github.*
-
-### Variables
-
-*The compiler makes it possible to add variables to basic* ***Hyper Text Markup Language*** *pages. You should start by declaring a new variable using the code below. The* ***~*** *means a new variable will be declared. Using the variable in the page is as simple as calling it with a* ***'.'*** *in front of it. By calling a variable, the complete tag will be replaced by the value of the named variable. Make sure you declare variables before calling them! Otherwise they will be replaces by 'undefined'.*
-
-***Declaring a variable:***
-
-`<!-- ~title Hello World! -->`
-
-***Calling a variable:***
-
-`<title><!-- .title --></title>`
-
-***Results in:***
-
-`<title>Hello World!</title>`
-
-### Includes
-
-***Wave-html*** *also makes it possible to include different html files. Simply write the following code, and the compiler will replace the tag with the content of the destination file.*
-
-***Including a file:***
-
-`<!-- .include footer.html -->`
+***Wave*** *is a project that acts as a preprocessor and adds some extra functionality to* ***Hyper Text Markup Language (HTML)*** *pages.
+To understand how this works exactly, you can find example input and output files in the examples folder in the original repo on Github.*
 
 ## Important notice
 
-*I wrote this in less than two hours, so the current version is not stable. This will change in the near future, I just need this for another project I am working on.*
+*The first version was written in less than two hours. It was used for developing another project with more ease. However, development is being continued and more features will be added over time. To file a bug, please use [Github's issue tracker](https://github.com/Jense5/Wave/issues).*
 
 ## Installation
 
-*Call the compiler from the command line by using the `wave` command. The output argument is optional. If this argument is not given, the output destination will automatically set to output.html.*
-
+***Wave*** *can be installed using npm (package manager for javascript). Run the commands below and you're good to go.*
 `$ sudo npm install -g wave-html`
 
-`$ wave input.html output.html`
+## Documentation
+*The tutorial on how to write correct wave-html (.whtml) files and how to use them can be found on [the project page](http://jense5.github.io/jense5/Wave).*
+
+## Extra
+*To add correct syntax highlighting for *Wave* *in Atom, visit [this project](https://github.com/N1ghtly/language-wave). Support for other editors will be added in the future (Probably, maybe... We don't know yet).*
 
 ## License
 
-*This project is distributed with the* ***MIT*** *license.*
+*This project is distributed under the* ***MIT*** *license.*
