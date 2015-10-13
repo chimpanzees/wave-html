@@ -15,6 +15,10 @@
   "scripts": {
     "test": "mocha"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jense5/Wave"
+  },
   "keywords": [
     "wave",
     "html",
