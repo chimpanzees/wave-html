@@ -1,4 +1,4 @@
-# Wave HTML
+<p align="center"><img src="http://i.imgur.com/J7qioAo.png" height="200" /></p>
 
 [![npm version](https://badge.fury.io/js/wave-html.svg)](https://www.npmjs.com/package/wave-html)
 [![npm downloads](https://img.shields.io/npm/dm/wave-html.svg)](https://www.npmjs.com/package/wave-html)
