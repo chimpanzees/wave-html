@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 (function() {
-  var Parser, args, callback, data, fs, input, location, output, parser, path, wave;
+  var Parser, args, data, fs, input, location, output, parser, path, wave;
 
   fs = require('fs');
 
@@ -35,10 +35,6 @@
 
   output = path.resolve(process.cwd(), args.output);
 
-  callback = function() {
-    return console.log('Done.');
-  };
-
-  wave(input, output, callback);
+  wave(input, output);
 
 }).call(this);
