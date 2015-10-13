@@ -9,10 +9,6 @@
 
 <p align="center"><img src="http://i.imgur.com/J7qioAo.png" height="200" /></p>
 
-Wave is a simple preprocessor for ***Hyper Text Markup Language (HTML)***.
-
-***Wave v1.0.6***.
-
 ## Introduction
 
 ***Wave*** *is a project that acts as a preprocessor and adds some extra functionality to* ***Hyper Text Markup Language (HTML)*** *pages.
