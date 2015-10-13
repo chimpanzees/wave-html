@@ -24,7 +24,8 @@ To understand how this works exactly, you can find example input and output file
 
 ## Installation
 
-***Wave*** *can be installed using npm (package manager for javascript). Run the commands below and you're good to go.*
+***Wave*** *can be installed using* ***npm*** *(package manager for javascript). Run the commands below and you're good to go.*
+
 `$ sudo npm install -g wave-html`
 
 ## Documentation
