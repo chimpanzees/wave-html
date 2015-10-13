@@ -7,9 +7,14 @@ module.exports = (Grunt) ->
       compile:
         files:
           'bin/executable.js': 'bin/executable.coffee',
+          'test/WaveTests.js': 'test/WaveTests.coffee',
           'lib/wave.js': 'lib/wave.coffee'
+    mochaTest:
+      test:
+        src: ['test/*.js']
 
-  Grunt.loadNpmTasks('grunt-contrib-coffee');
+  Grunt.loadNpmTasks('grunt-mocha-test')
+  Grunt.loadNpmTasks('grunt-contrib-coffee')
 
   Grunt.registerTask 'prepare-executable', () ->
     exeLoc = __dirname + '/bin/executable.js'
@@ -20,4 +25,7 @@ module.exports = (Grunt) ->
     fs.writeSync(fd, data, 0, data.length)
     fs.close(fd)
 
-  Grunt.registerTask 'build', ['coffee', 'prepare-executable']
+  Grunt.registerTask 'test', 'mochaTest'
+  Grunt.registerTask 'compile', ['coffee', 'prepare-executable']
+
+  Grunt.registerTask 'build', ['compile', 'test']
