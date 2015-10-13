@@ -10,6 +10,7 @@ vars = {}
 commands =
   callVariable: /<!-- \.(\w+) -->/i,
   includeFile: /<!-- \.include (.+) -->/i,
+  notincludeFile: /<!-- \.notinclude (.+) -->/i,
   fetchDeclaredVariableName: /<!-- ~(\w+)/i,
   declareVariableCommand: /<!-- ~(.)+( )(.)+ -->/i
 
@@ -40,10 +41,15 @@ class HTMLSource
       @lines.push line for line in component.lines
     line
 
+  detectNotincludeFile: (line) ->
+    line = "" if commands.notincludeFile.test(line)
+    line
+
   formatLine: (line) ->
     line = @detectDeclareVariable line
     line = @detectCallVariable line
     line = @detectIncludeFile line
+    line = @detectNotincludeFile line
     @lines.push line
 
   parse: () ->
