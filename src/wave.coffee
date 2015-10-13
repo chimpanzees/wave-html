@@ -84,7 +84,6 @@ getFileExtension = (path) ->
 
 wave = (input, output = 'output.html', callback = null) ->
   extension = getFileExtension(input)
-  extension="zed"
   if extension == "whtml"
     path = completePathFrom input
     outputPath = completePathFrom output
