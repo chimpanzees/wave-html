@@ -1,11 +1,15 @@
 (function() {
-  var HTMLSource, callsite, commands, compileFile, completePathFrom, fixUI, fs, getFileExtension, mainCallback, outputPath, path, pathlib, saveOutput, stopWith, vars, wave;
+  var HTMLSource, callsite, commands, compileFile, completePathFrom, fixUI, fs, getFileExtension, log4js, logger, mainCallback, outputPath, path, pathlib, saveOutput, stopWith, vars, wave;
 
   fs = require('fs');
 
   pathlib = require('path');
 
   callsite = require('callsite');
+
+  log4js = require('log4js');
+
+  logger = log4js.getLogger();
 
   fixUI = require('js-beautify').html;
 
