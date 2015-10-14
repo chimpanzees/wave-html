@@ -28,4 +28,6 @@ args = parser.parseArgs()
 input = path.resolve process.cwd(), args.input
 output = path.resolve process.cwd(), args.output
 
-wave(input, output)
+done = () ->
+
+wave(input, output, done)

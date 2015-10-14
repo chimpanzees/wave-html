@@ -1,5 +1,5 @@
 (function() {
-  var HTMLSource, callsite, commands, compileFile, completePathFrom, fixUI, fs, getFileExtension, outputPath, path, pathlib, saveOutput, stopWith, vars, wave;
+  var HTMLSource, callsite, commands, compileFile, completePathFrom, fixUI, fs, getFileExtension, mainCallback, outputPath, path, pathlib, saveOutput, stopWith, vars, wave;
 
   fs = require('fs');
 
@@ -151,7 +151,11 @@
       indent_size: 2,
       end_with_newline: true
     });
-    return fs.writeFileSync(outputPath, buffer);
+    return fs.writeFile(outputPath, buffer, function() {
+      if (typeof mainCallback !== "undefined" && mainCallback !== null) {
+        return mainCallback();
+      }
+    });
   };
 
   compileFile = function(file) {
@@ -164,6 +168,8 @@
   path = 'error.error';
 
   outputPath = 'output.html';
+
+  mainCallback = null;
 
   completePathFrom = function(path) {
     var caller, dir;
@@ -181,15 +187,19 @@
     return extension = path.substr(index).replace('.', '');
   };
 
-  wave = function(input, output) {
+  wave = function(input, output, callback) {
     var extension;
     if (output == null) {
       output = 'output.html';
+    }
+    if (callback == null) {
+      callback = null;
     }
     extension = getFileExtension(input);
     if (extension === "whtml") {
       path = completePathFrom(input);
       outputPath = completePathFrom(output);
+      mainCallback = callback;
       return fs.lstat(path, function(error, stats) {
         if (error) {
           stopWith(error);
