@@ -10,7 +10,9 @@
     "example": "examples"
   },
   "dependencies": {
-    "js-beautify": "1.5.10"
+    "js-beautify": "1.5.10",
+    "argparse": "^1.0.2",
+    "callsite": "^1.0.0"
   },
   "scripts": {
     "test": "mocha"
@@ -27,8 +29,6 @@
   "author": "Jensen Bernard",
   "license": "MIT",
   "devDependencies": {
-    "argparse": "^1.0.2",
-    "callsite": "^1.0.0",
     "chai": "^3.3.0",
     "coffee-script": "^1.10.0",
     "grunt": "^0.4.5",
