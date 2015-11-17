@@ -1,11 +1,9 @@
 <p align="center"><img src="http://i.imgur.com/5RXgn8L.png" height="300" /></p>
 
-<p align="center">
 [![npm version](https://img.shields.io/npm/v/wave-html.svg)](https://www.npmjs.com/package/wave-html)
 [![npm downloads](https://img.shields.io/npm/dt/wave-html.svg)](https://www.npmjs.com/package/wave-html)
 [![Built with Grunt](https://img.shields.io/badge/Built%20with-Grunt-orange.svg)](http://gruntjs.com/)
 [![npm downloads](https://img.shields.io/npm/l/wave-html.svg)](https://www.npmjs.com/package/wave-html)
-</p>
 
 ***Simple preprocessor for HTML with HTML5 syntax.***
 
