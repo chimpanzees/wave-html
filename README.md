@@ -1,13 +1,9 @@
-<p align="center">
-<img src="http://i.imgur.com/9hGN9Oe.png" height="300" />
-</p>
+<img src="http://i.imgur.com/9hGN9Oe.png" height="75" />
 
-<p align="center">
 <img src="https://img.shields.io/npm/v/wave-html.svg">
 <img src="https://img.shields.io/npm/dt/wave-html.svg">
 <img src="https://img.shields.io/badge/Built%20with-Grunt-orange.svg">
 <img src="https://img.shields.io/npm/l/wave-html.svg">
-</p>
 
 ***Simple preprocessor for HTML with HTML5 syntax.***
 
