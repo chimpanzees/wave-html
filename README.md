@@ -5,25 +5,57 @@
 [![Built with Grunt](https://img.shields.io/badge/Built%20with-Grunt-orange.svg)](http://gruntjs.com/)
 [![npm downloads](https://img.shields.io/npm/l/wave-html.svg)](https://www.npmjs.com/package/wave-html)
 
-<p align="center"><img src="http://i.imgur.com/J7qioAo.png" height="200" /></p>
+***Simple preprocessor for HTML with HTML5 syntax.***
 
-## Introduction
+#### Installation
 
-***Wave*** *is a project that acts as a preprocessor and adds some extra functionality to* ***Hyper Text Markup Language (HTML)*** *pages.
-To understand how this works, you can find example input and output files in the examples folder in the original repo on Github. These and more examples are also explained on the [projects website](http://jense5.github.io/Wave).*
+The compiler van be installed globally via **npm**.
 
-## Installation
+```bash
+$ npm install --global wave-html
+```
 
-*As* ***Wave*** *is hosted over at* ***npm*** *,* ***Wave*** *can be installed using* ***npm*** *(package manager for* ***NodeJS***)*. Simply run the command below and you're good to go. If this is not the case and you can't seem to figure out what the issue is you can always use the issue tracker and we will try our best to help you.*
+#### Syntax
 
-`$ sudo npm install -g wave-html`
+Variables can be declared using a wave sign. Call them by using a dot in front of a variable name. All declaration will be done inside HTML5 comments. The code snippets below show a `.whtml` file before compilation, as well as a `.html` output file.
 
-## Documentation
-*The tutorial, as well as more info on how to write correct wave-html (.whtml) files and how to use them, can be found on [the projects page](http://jense5.github.io/Wave). As this readme will not likely be updated very often, all future documentation about added functionalities will appear on the project page.*
+```html
+<!-- ~title Hello World! -->
+<h1><!-- .title --></h1>
+```
 
-## Extra
-*To add correct syntax highlighting for* ***Wave*** *in Atom, visit [this project](https://github.com/N1ghtly/language-wave). Support for other editors will be added in the future (Probably, maybe... We don't know yet). This is mostly based on the syntax highlighting for regular HTML but some special styles have been added to fully accompany Wave.*
+```html
+<h1>Hello World!</h1>
+```
 
-## License
+You can also include other files with the include command. This will take the content of the given file and writes it where the include tag is located.
 
-*This project is distributed under the* ***MIT*** *license.*
+```html
+<!-- .include ../head.html -->
+```
+
+It might be useful to use loops to quickly generate a template (for debugging). In this case, you can use the build in loop function of wave. Here is another example of input and output.
+
+```html
+<!-- .loop 1:3 -->
+  <p>Some paragraph</p>
+<!-- .endloop -->
+```
+
+```html
+<p>Some paragraph</p>
+<p>Some paragraph</p>
+<p>Some paragraph</p>
+```
+
+#### Command line compilation
+
+Run the compiler with `wave`, followed by an input and output path.
+
+```
+$ wave source.whtml output.html
+```
+
+#### License
+
+This project is distributed under the **MIT** license.
