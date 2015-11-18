@@ -8,5 +8,5 @@
   <br>
   Simple <b>HTML5</b> Preprocessor.
   <br>
-  For more info or docs, please take a look at the <a href="https://github.com/Jense5/node-user-defaults/wiki/Tutorial">Github Tutorial</a>.
+  For more info or docs, please take a look at the <a href="https://github.com/Jense5/wave-html/wiki/Tutorial">Github Tutorial</a>.
 </p>
