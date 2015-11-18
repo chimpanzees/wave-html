@@ -10,9 +10,11 @@
     "example": "examples"
   },
   "dependencies": {
-    "js-beautify": "1.5.10",
     "argparse": "^1.0.2",
-    "callsite": "^1.0.0"
+    "callsite": "^1.0.0",
+    "js-beautify": "1.5.10",
+    "minimist": "^1.2.0",
+    "winston": "^2.1.0"
   },
   "scripts": {
     "test": "mocha"
