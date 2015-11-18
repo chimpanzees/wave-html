@@ -2,9 +2,6 @@
 fs = require 'fs'
 pathlib = require 'path'
 
-log4js = require 'log4js'
-logger = log4js.getLogger()
-
 fixUI = require('js-beautify').html
 
 vars = {}
