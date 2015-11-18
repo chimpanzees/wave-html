@@ -28,7 +28,7 @@ class HTMLSource
 
   # Create new HTMLSource with path (of file)
   constructor: (@path) ->
-    (@lines, @loops, @startValueForLoop, @endValueForLoop) = ([], [], 0, 0)
+    [@lines, @loops, @startValueForLoop, @endValueForLoop] = [[], [], 0, 0]
     @isLooping = false
 
   # Detect a variable declaration, if it is
