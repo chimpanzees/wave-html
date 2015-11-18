@@ -3,12 +3,16 @@ path = require('path')
 wave = require('./wave')
 winston = require('winston')
 
-location = __dirname + '/../package.json'
-data = JSON.parse(fs.readFileSync(location, 'utf8'));
 
 # Parse command line arguments
 ARGs = require('minimist')(process.argv.slice(2))
 commands = ARGs['_']
+
+# Check for version command
+if (ARGs['version'] or ARGs['v'])
+  data = JSON.parse(fs.readFileSync('../package.json', 'utf8'))
+  winston.info('Wave v' + data['version'])
+  process.exit()
 
 # Check if input and output is provided
 if (commands.length != 2)
