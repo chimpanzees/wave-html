@@ -1,11 +1,11 @@
 {
   "name": "wave-html",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Simple preprocessor for HTML",
   "bin": {
-    "wave": "bin/executable.js"
+    "wave": "module/bin/executable.js"
   },
-  "main": "bin/wave.js",
+  "main": "module/bin/wave.js",
   "directories": {
     "example": "examples"
   },
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jense5/Wave"
+    "url": "https://github.com/Jense5/wave-html"
   },
   "keywords": [
     "wave",
@@ -34,7 +34,6 @@
     "coffee-script": "^1.10.0",
     "grunt": "^0.4.5",
     "grunt-contrib-coffee": "^0.13.0",
-    "grunt-mocha-test": "^0.12.7",
     "mocha": "^2.3.3"
   }
 }
