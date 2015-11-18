@@ -1,3 +1,7 @@
+###
+  Basic Gruntfile for Wave-html
+###
+
 fs = require 'fs'
 
 module.exports = (Grunt) ->
@@ -6,14 +10,12 @@ module.exports = (Grunt) ->
     coffee:
       compile:
         files:
-          'bin/executable.js': 'src/executable.coffee',
-          'bin/tests/WaveTests.js': 'tests/WaveTests.coffee',
-          'bin/wave.js': 'src/wave.coffee'
+          'module/bin/executable.js': 'module/src/executable.coffee',
+          'module/bin/wave.js': 'module/src/wave.coffee'
     mochaTest:
       test:
         src: ['bin/tests/*.js']
 
-  Grunt.loadNpmTasks('grunt-mocha-test')
   Grunt.loadNpmTasks('grunt-contrib-coffee')
 
   Grunt.registerTask 'prepare-executable', () ->
@@ -25,7 +27,4 @@ module.exports = (Grunt) ->
     fs.writeSync(fd, data, 0, data.length)
     fs.close(fd)
 
-  Grunt.registerTask 'test', 'mochaTest'
   Grunt.registerTask 'compile', ['coffee', 'prepare-executable']
-
-  Grunt.registerTask 'build', ['compile', 'test']
