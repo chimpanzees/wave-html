@@ -16,7 +16,7 @@
     "winston": "^2.1.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/mocha/bin/mocha --compilers coffee:coffee-script/register module/test/"
   },
   "repository": {
     "type": "git",

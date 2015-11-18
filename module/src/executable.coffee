@@ -1,8 +1,12 @@
+###
+  Command line tool for wave compiler
+###
+
+# Require libs
 fs = require('fs')
 path = require('path')
 wave = require('./wave')
 winston = require('winston')
-
 
 # Parse command line arguments
 ARGs = require('minimist')(process.argv.slice(2))
@@ -10,7 +14,7 @@ commands = ARGs['_']
 
 # Check for version command
 if (ARGs['version'] or ARGs['v'])
-  data = JSON.parse(fs.readFileSync('../package.json', 'utf8'))
+  data = JSON.parse(fs.readFileSync('../../package.json', 'utf8'))
   winston.info('Wave v' + data['version'])
   process.exit()
 
