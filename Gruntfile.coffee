@@ -19,7 +19,7 @@ module.exports = (Grunt) ->
   Grunt.loadNpmTasks('grunt-contrib-coffee')
 
   Grunt.registerTask 'prepare-executable', () ->
-    exeLoc = __dirname + '/bin/executable.js'
+    exeLoc = __dirname + '/module/bin/executable.js'
     data = fs.readFileSync(exeLoc)
     fd = fs.openSync exeLoc, 'w+'
     buffer = new Buffer '#!/usr/bin/env node\n\n'
