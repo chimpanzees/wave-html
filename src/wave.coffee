@@ -1,7 +1,6 @@
 
 fs = require 'fs'
 pathlib = require 'path'
-callsite = require 'callsite'
 
 log4js = require 'log4js'
 logger = log4js.getLogger()
@@ -112,10 +111,7 @@ mainCallback = null
 
 completePathFrom = (path) ->
   return path if pathlib.isAbsolute path
-  caller = callsite()[2].getFileName()
-  dir = pathlib.dirname(caller)
-  pathlib.resolve dir, path
-
+  pathlib.resolve(process.cwd(), path)
 
 wave = (input, output = 'output.html', callback = null) ->
   path = completePathFrom input
