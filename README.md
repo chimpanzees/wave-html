@@ -4,7 +4,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/npm/v/wave-html.svg">
-  <img src="https://img.shields.io/travis/Jense5/wave-build.svg">
+  <img src="https://img.shields.io/travis/Jense5/wave-html.svg">
   <br>
   Simple <b>HTML5</b> Preprocessor.
   <br>
