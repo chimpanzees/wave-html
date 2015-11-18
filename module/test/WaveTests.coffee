@@ -16,4 +16,4 @@ describe 'Wave', () ->
       expect(fs.statSync(__dirname + '/../examples/output.html')["size"])
       .to.equal(fs.statSync(__dirname + '/../examples/example.html')["size"])
       done()
-    wave '../examples/input.whtml', '../examples/example.html', callback
+    wave __dirname + '/../examples/input.whtml', __dirname + '../examples/example.html', callback

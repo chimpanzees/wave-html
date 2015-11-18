@@ -116,7 +116,7 @@ stopWith = (error) ->
 saveOutput = (output) ->
   buffer = ''
   output.forEach (str) -> buffer += str + '\n' if str != ''
-  buffer = fixUI(buffer, { indent_size: 2, end_with_newline: true })
+  buffer = beautify(buffer, { indent_size: 2, end_with_newline: true })
   fs.writeFile outputPath, buffer, () -> mainCallback() if mainCallback?
 
 # Compile file and write output
