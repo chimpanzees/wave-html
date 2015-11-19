@@ -15,7 +15,7 @@ commands = ARGs['_']
 # Check for version command
 if (ARGs['version'] or ARGs['v'])
   data = JSON.parse(fs.readFileSync('../../package.json', 'utf8'))
-  winston.info('Wave v' + data['version'])
+  winston.info('Wave v1.1.2')
   process.exit()
 
 # Check if input and output is provided
